@@ -1,0 +1,69 @@
+@model Blog.Models.Article
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+
+<div>
+    <h4>Article</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreatedUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifyTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifyUserId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ModifyUserId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Summary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Summary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</p>
+</body>
+</html>
